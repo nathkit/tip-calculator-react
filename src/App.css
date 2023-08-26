@@ -1,11 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap");
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  font-family: "Ubuntu Mono", monospace;
-}
 
+/* * {
+  outline: 1px solid tomato;
+} */
 .tip-btn {
   width: 118px;
   height: 47px;
@@ -19,4 +16,102 @@
   height: 100%;
   border-radius: 5px;
   text-align: center;
+}
+
+.output-container {
+  min-width: 415px;
+  min-height: 418px;
+}
+
+.input-container {
+  min-width: 385px;
+  min-height: 418px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.bill-input input,
+.people-count input {
+  width: 385px;
+  height: 45px;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+input {
+  background-color: #f3f8fb;
+  color: #00474b !important;
+}
+
+.app-header h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #426164;
+}
+
+.calculator-container,
+.output-container {
+  border-radius: 20px;
+}
+
+div.calculate-output,
+.reset-btn {
+  margin: 0 auto;
+}
+
+div.calculate-output {
+  width: 355px;
+  height: 75px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.reset-btn {
+  width: 335px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+  background-color: #0d686d;
+  border-radius: 10px;
+  color: #035b60;
+}
+
+.tip-btn,
+.reset-btn {
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 1.2px;
+}
+
+.input-container div h1,
+.label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  letter-spacing: 1.2px;
+  font-size: 1.1rem;
+  color: #566465;
+}
+
+.label > h1:first-child {
+  color: #dbfdfe;
+}
+.label > p {
+  color: #71a2a5 !important;
+}
+
+.display-output {
+  font-size: 3rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #2ac7b0;
+}
+
+.label,
+.display-output {
+  margin: auto 0;
 }
