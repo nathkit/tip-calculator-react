@@ -60,12 +60,14 @@ function App() {
 
   return (
     <>
-      <div className="bg-body-bg h-screen flex flex-col items-center justify-center">
-        <div className="app-header mb-14 sm:mb-20">
+      <div className="bg-body-bg min-h-screen flex flex-col items-center justify-center">
+        <div className="app-header my-14 tablet:mb-20">
           <h1>S P L I</h1>
           <h1>T T E R</h1>
         </div>
-        <div className="calculator-container bg-[white] w-[925px] h-[485px] flex justify-around items-center">
+        <div
+          className="calculator-container bg-[white] w-[375px] flex flex-col items-center
+          tablet:w-[925px] tablet:h-[485px] tablet:flex-row tablet:justify-around tablet:items-center">
           <div className="input-container">
             <div className="bill-input">
               <h1>Bill</h1>
@@ -80,7 +82,7 @@ function App() {
             </div>
             <div className="tip-select-section">
               <h1>Select Tip %</h1>
-              <div className="tip-btn-container grid grid-cols-2 gap-y-3.5 sm:grid-cols-3">
+              <div className="tip-btn-container grid grid-cols-2 place-items-center gap-y-3.5 gap-x-4 tablet:grid-cols-3">
                 <button
                   className="tip-btn"
                   value={5}
@@ -162,7 +164,7 @@ function App() {
                 <h1>${tipAmount}</h1>
               </div>
             </div>
-            <div className="calculate-output">
+            <div className="calculate-output second">
               <div className="label">
                 <h1>Total</h1>
                 <p>/ person</p>
@@ -175,11 +177,17 @@ function App() {
           </div>
         </div>
         <div class="attribution">
-          Challenge by{" "}
-          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
-            Frontend Mentor
-          </a>
-          . Coded by <a href="#">Nathkit Tangthumrongsakkul</a>.
+          <h1>
+            Challenge by{" "}
+            <a
+              href="https://www.frontendmentor.io?ref=challenge"
+              target="_blank">
+              Frontend Mentor
+            </a>
+          </h1>
+          <h1>
+            Coded by <a href="#">Nathkit Tangthumrongsakkul</a>.
+          </h1>
         </div>
       </div>
     </>

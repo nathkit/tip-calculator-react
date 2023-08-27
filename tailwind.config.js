@@ -17,6 +17,9 @@ export default {
       'gray': '#8492a6',
       'gray-light': '#d3dce6',
     },
+    screens: {
+      'tablet': '821px'
+    },
     extend: {},
   },
   plugins: [],
