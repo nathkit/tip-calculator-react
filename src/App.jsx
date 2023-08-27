@@ -48,44 +48,13 @@ function App() {
   }, [totleBill, percentTip, numberPeople]);
 
   function ResetButton() {
-    if (tipAmount === "0.00" && totalAmountPerPerson === "0.00") {
-      return (
-        <button className="reset-btn no-active">
-          <h1>RESET</h1>
-        </button>
-      );
-    }
+    const isInactive = tipAmount === "0.00" && totalAmountPerPerson === "0.00";
     return (
       <button
-        className="reset-btn on-active"
-        onClick={() => {
-          handleReset();
-        }}>
+        className={`reset-btn ${isInactive ? "no-active" : "on-active"}`}
+        onClick={isInactive ? undefined : handleReset}>
         <h1>RESET</h1>
       </button>
-    );
-  }
-
-  function NumberPeople() {
-    return (
-      <div className="people-count">
-        <div className="flex justify-between">
-          <h1 className="inline-block">Number of People</h1>
-          {(numberPeople === 0 || numberPeople === "0") && (
-            <h1 className="inline-block alert">Can't be zero</h1>
-          )}
-        </div>
-        <img src={personLogo} className="logo" alt="Person logo" />
-        <input
-          className={`input ${
-            numberPeople === 0 || numberPeople === "0" ? "zero" : ""
-          }`}
-          type="number"
-          min="0"
-          value={numberPeople}
-          onChange={handleNumberPeople}
-        />
-      </div>
     );
   }
 
@@ -164,7 +133,24 @@ function App() {
                 </div>
               </div>
             </div>
-            <NumberPeople />
+            <div className="people-count">
+              <div className="flex justify-between">
+                <h1 className="inline-block">Number of People</h1>
+                {(numberPeople === 0 || numberPeople === "0") && (
+                  <h1 className="inline-block alert">Can't be zero</h1>
+                )}
+              </div>
+              <img src={personLogo} className="logo" alt="Person logo" />
+              <input
+                className={`input ${
+                  numberPeople === 0 || numberPeople === "0" ? "zero" : ""
+                }`}
+                type="number"
+                min="0"
+                value={numberPeople}
+                onChange={handleNumberPeople}
+              />
+            </div>
           </div>
           <div className="output-container bg-green-dark">
             <div className="calculate-output">
