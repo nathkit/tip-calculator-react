@@ -38,11 +38,16 @@
   border-radius: 5px;
   font-size: 1.5rem;
   font-weight: bold;
+  text-align: right;
 }
 
 input {
   background-color: #f3f8fb;
   color: #00474b !important;
+}
+
+input:focus {
+  outline: 2px solid #4cbbae;
 }
 
 .app-header h1 {
@@ -76,9 +81,23 @@ div.calculate-output {
   justify-content: center;
   align-items: center;
   margin-top: 100px;
+  border-radius: 5px;
+}
+
+.reset-btn.no-active {
   background-color: #0d686d;
-  border-radius: 10px;
   color: #035b60;
+}
+
+.reset-btn.on-active {
+  background-color: #26c2ad;
+  color: #004447;
+}
+
+.reset-btn.on-active:focus,
+.tip-btn:focus {
+  background-color: #9fe8df;
+  color: #003c36;
 }
 
 .tip-btn,
@@ -114,4 +133,25 @@ div.calculate-output {
 .label,
 .display-output {
   margin: auto 0;
+}
+
+.people-count,
+.bill-input {
+  position: relative;
+}
+
+.logo {
+  position: absolute;
+  top: 57%;
+  left: 5%;
+  height: 20px;
+}
+
+div.flex.justify-between > h1.inline-block.alert {
+  color: tomato;
+  letter-spacing: 1.2px;
+}
+
+div.input-container > div.people-count > input.input.zero {
+  outline: 2px solid tomato;
 }
